@@ -1,0 +1,10 @@
+name: DonateCases
+version: 1.0
+author: FlamesYT
+main: ru.servbuy.donatecases.Main
+depend: [HolographicDisplays]
+softdepend:
+  - vault
+commands:
+  cases:
+    aliases: [cases, mcases, mooncases]

@@ -6,5 +6,5 @@ depend: [HolographicDisplays]
 softdepend:
   - vault
 commands:
-  cases:
-    aliases: [cases, mcases, mooncases]
+  dc:
+    aliases: [cases,case, donatecase, donatcase]

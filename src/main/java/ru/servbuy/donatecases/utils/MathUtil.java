@@ -1,19 +1,24 @@
 package ru.servbuy.donatecases.utils;
 
 import ru.servbuy.donatecases.structure.Item;
-import java.util.concurrent.*;
+
+import java.util.Arrays;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class MathUtil
 {
     public static Item getWinItem(final Item[] items) {
-        final int x = ThreadLocalRandom.current().nextInt(100) + 1;
-        int l = 0;
+        if (items.length == 0)
+            return null;
+        int sum = Arrays.stream(items).mapToInt(Item::getChance).sum();
+        final int randomNum = ThreadLocalRandom.current().nextInt(sum);
+        int currentSum = 0;
         for (final Item item : items) {
-            final int c = item.getChance();
-            if (x >= 1 && x <= l + c) {
+            int chance = item.getChance();
+            if (randomNum <= currentSum + chance) {
                 return item;
             }
-            l += c;
+            currentSum += chance;
         }
         return null;
     }

@@ -1,9 +1,8 @@
 package ru.servbuy.donatecases.utils;
 
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import ru.servbuy.donatecases.title.Title;
-import org.bukkit.entity.*;
-import org.bukkit.*;
-import org.bukkit.command.*;
 
 public class RunCommand
 {
@@ -22,7 +21,7 @@ public class RunCommand
                     break;
                 }
                 case "op": {
-                    if (p != null && p.isOnline()) {
+                    if (p.isOnline()) {
                         p.setOp(true);
                         p.chat(cmd[1]);
                         p.setOp(false);
@@ -31,22 +30,22 @@ public class RunCommand
                     break;
                 }
                 case "tm": {
-                    if (p != null && p.isOnline()) {
+                    if (p.isOnline()) {
                         Title.sendTitle(p, 20, 40, 20, cmd[1], cmd[2]);
                         break;
                     }
                     break;
                 }
                 case "tell": {
-                    if (p != null && p.isOnline()) {
+                    if (p.isOnline()) {
                         p.sendMessage(cmd[1]);
                         break;
                     }
                     break;
                 }
                 case "console": {
-                    if (p != null && p.isOnline()) {
-                        Bukkit.dispatchCommand((CommandSender)Bukkit.getConsoleSender(), cmd[1]);
+                    if (p.isOnline()) {
+                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), cmd[1]);
                         break;
                     }
                     break;

@@ -4,28 +4,28 @@ import ru.servbuy.donatecases.Main;
 
 public class UserData
 {
-    public static int getCases(final String p, final String caze) {
-        return Main.getInstance().getStorage().getInt(caze + "." + p);
+    public static int getCases(final String p, final String donateCase) {
+        return Main.getInstance().getStorage().getInt(donateCase + "." + p);
     }
     
-    public static void addCases(final String p, final String caze, final int amount) {
-        Main.getInstance().getStorage().set(caze + "." + p, getCases(p, caze) + amount);
+    public static void addCases(final String p, final String donateCase, final int amount) {
+        Main.getInstance().getStorage().set(donateCase + "." + p, getCases(p, donateCase) + amount);
         Main.getInstance().saveStorage();
         Main.getInstance().reloadStorage();
     }
     
-    public static void setCases(final String p, final String caze, final int amount) {
-        Main.getInstance().getStorage().set(caze + "." + p, amount);
+    public static void setCases(final String p, final String donateCase, final int amount) {
+        Main.getInstance().getStorage().set(donateCase + "." + p, amount);
         Main.getInstance().saveStorage();
         Main.getInstance().reloadStorage();
     }
     
-    public static void removeCases(final String p, final String caze, final int amount) {
-        if (getCases(p, caze) - amount < 0) {
-            Main.getInstance().getStorage().set(caze + "." + p, 0);
+    public static void removeCases(final String p, final String donateCase, final int amount) {
+        if (getCases(p, donateCase) - amount < 0) {
+            Main.getInstance().getStorage().set(donateCase + "." + p, 0);
         }
         else {
-            Main.getInstance().getStorage().set(caze + "." + p, getCases(p, caze) - amount);
+            Main.getInstance().getStorage().set(donateCase + "." + p, getCases(p, donateCase) - amount);
         }
         Main.getInstance().saveStorage();
         Main.getInstance().reloadStorage();

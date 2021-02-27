@@ -11,24 +11,22 @@ import org.bukkit.plugin.java.JavaPlugin;
 import ru.servbuy.donatecases.gui.ClickListener;
 import ru.servbuy.donatecases.gui.ItemBuilder;
 import ru.servbuy.donatecases.listeners.EventListener;
+import ru.servbuy.donatecases.structure.AnimSettings;
 import ru.servbuy.donatecases.structure.Case;
 import ru.servbuy.donatecases.structure.Item;
 import ru.servbuy.donatecases.structure.ItemType;
 import ru.servbuy.donatecases.utils.StringUtil;
 
+import java.io.File;
 import java.util.*;
 
 public class Main extends JavaPlugin
 {
-    private static Main instance;
+    @Getter private static Main instance;
     @Getter private List<Case> cases;
     private Map<Location, Boolean> casesLocations;
     private Map<Location, Hologram> opened;
     @Getter private List<String> cache;
-    
-    public static Main getInstance() {
-        return Main.instance;
-    }
     
     public Case getCase(final String caseName) {
         return cases.stream().filter(x -> x.getName().equalsIgnoreCase(caseName)).findAny().orElse(null);
@@ -64,24 +62,18 @@ public class Main extends JavaPlugin
     
     public void onEnable() {
         Main.instance = this;
-        this.getConfig().options().copyDefaults(true);
-        this.saveConfig();
+        if (!new File(getDataFolder(), "config.yml").exists())
+            getConfig().options().copyDefaults(true);
+        saveConfig();
         Config.init();
-        this.cases = new ArrayList<>();
-        this.casesLocations = new HashMap<>();
-        this.opened = new HashMap<>();
-        this.cache = new ArrayList<>();
-        this.loadCases();
-        this.getServer().getPluginManager().registerEvents(new ClickListener(), this);
-        this.getServer().getPluginManager().registerEvents(new EventListener(), this);
-        this.getCommand("cases").setExecutor(new Commands());
-        final List<String> fakeBroadcast = getInstance().getConfig().getStringList("MESSAGES.FAKE_BROADCAST");
-        Bukkit.getScheduler().scheduleSyncRepeatingTask(getInstance(), () -> {
-            this.cache.clear();
-            Bukkit.getOnlinePlayers().forEach(pl ->
-                    pl.sendMessage(fakeBroadcast.stream().map(y ->
-                    y = StringUtil.colorize(y.replace("{player}", pl.getName()))).toArray(String[]::new)));
-        }, 0L, getConfig().getInt("GUI.FAKE_CHANCE.UPDATE_TIME") * 20);
+        cases = new ArrayList<>();
+        casesLocations = new HashMap<>();
+        opened = new HashMap<>();
+        cache = new ArrayList<>();
+        loadCases();
+        getServer().getPluginManager().registerEvents(new ClickListener(), this);
+        getServer().getPluginManager().registerEvents(new EventListener(), this);
+        getCommand("dc").setExecutor(new Commands());
     }
     
     public void reloadCases() {
@@ -90,29 +82,45 @@ public class Main extends JavaPlugin
     }
     
     public void loadCases() {
-        for (final String caseName : this.getConfig().getConfigurationSection("CASES").getValues(false).keySet()) {
-            final List<String> itemsName = new ArrayList<>(getConfig().getConfigurationSection("CASES." + caseName + ".ITEMS").getValues(false).keySet());
+        for (final String caseName : this.getConfig().getConfigurationSection("cases").getValues(false).keySet()) {
+            final List<String> itemsName = new ArrayList<>(getConfig().getConfigurationSection("cases." + caseName + ".items").getValues(false).keySet());
             final Item[] items = new Item[itemsName.size()];
             for (int index = 0; index < itemsName.size(); index++) {
-                final String[] commands = new String[this.getConfig().getStringList("CASES." + caseName + ".ITEMS." + itemsName.get(index) + ".COMMANDS").size()];
+                final String[] commands = new String[this.getConfig().getStringList("cases." + caseName + ".items." + itemsName.get(index) + ".commands").size()];
                 for (int command = 0; command < commands.length; ++command) {
-                    commands[command] = this.getConfig().getStringList("CASES." + caseName + ".ITEMS." + itemsName.get(index) + ".COMMANDS").get(command);
+                    commands[command] = this.getConfig().getStringList("cases." + caseName + ".items." + itemsName.get(index) + ".commands").get(command);
                 }
-                final ItemType type = ItemType.valueOf(this.getConfig().getString("CASES." + caseName + ".ITEMS." + itemsName.get(index) + ".TYPE"));
+                final ItemType type = ItemType.valueOf(this.getConfig().getString("cases." + caseName + ".items." + itemsName.get(index) + ".type"));
                 String group = null;
                 if (type == ItemType.GROUP) {
-                    group = this.getConfig().getString("CASES." + caseName + ".ITEMS." + itemsName.get(index) + ".GROUP");
+                    group = this.getConfig().getString("cases." + caseName + ".items." + itemsName.get(index) + ".group");
                 }
-                items[index] = new Item(StringUtil.colorize(this.getConfig().getString("CASES." + caseName + ".ITEMS." + itemsName.get(index) + ".TITLE")), commands, new ItemBuilder(this.getConfig().getString("CASES." + caseName + ".ITEMS." + itemsName.get(index) + ".ID")).build(), group, this.getConfig().getString("CASES." + caseName + ".ITEMS." + itemsName.get(index) + ".GROUP_COMMAND"), this.getConfig().getInt("CASES." + caseName + ".ITEMS." + itemsName.get(index) + ".CHANCE"), type);
+                items[index] = new Item(
+                        StringUtil.colorize(this.getConfig().getString("cases." + caseName + ".items." + itemsName.get(index) + ".title")),
+                        commands,
+                        new ItemBuilder(this.getConfig().getString("cases." + caseName + ".items." + itemsName.get(index) + ".id")).build(),
+                        group,
+                        getConfig().getString("cases." + caseName + ".items." + itemsName.get(index) + ".group-command"),
+                        getConfig().getInt("cases." + caseName + ".items." + itemsName.get(index) + ".chance"),
+                        type);
             }
-            cases.add(new Case(items, caseName, Sound.valueOf(this.getConfig().getString("CASES." + caseName + ".ANIMATION_SETTINGS.ROTATE_SOUND")), Sound.valueOf(this.getConfig().getString("CASES." + caseName + ".ANIMATION_SETTINGS.END_SOUND")), this.getConfig().getDouble("CASES." + caseName + ".ANIMATION_SETTINGS.ITEMS_SPEED"), this.getConfig().getDouble("CASES." + caseName + ".ANIMATION_SETTINGS.PARTICLES_SPEED"), this.getConfig().getInt("CASES." + caseName + ".ANIMATION_SETTINGS.ROTATE_TIME"), this.getConfig().getDouble("CASES." + caseName + ".ANIMATION_SETTINGS.RADIUS"), this.getConfig().getBoolean("CASES." + caseName + ".ANIMATION_SETTINGS.USE_FROSTLORD")));
+            cases.add(new Case(items,
+                    caseName, new AnimSettings(
+                        Sound.valueOf(this.getConfig().getString("cases." + caseName + ".animation-settings.rotate-sound")),
+                        Sound.valueOf(this.getConfig().getString("cases." + caseName + ".animation-settings.end-sound")),
+                        getConfig().getDouble("cases." + caseName + ".animation-settings.items-speed"),
+                        getConfig().getDouble("cases." + caseName + ".animation-settings.particles-speed"),
+                        getConfig().getInt("cases." + caseName + ".animation-settings.rotate-time"),
+                        getConfig().getDouble("cases." + caseName + ".animation-settings.radius"),
+                        getConfig().getBoolean("cases." + caseName + ".animation-settings.use-frostlord"))
+            ));
         }
-        if (getInstance().getConfig().getStringList("CASES_LOCATIONS") != null) {
-            for (final String location : getInstance().getConfig().getStringList("CASES_LOCATIONS")) {
+        if (getInstance().getConfig().getStringList("case-locations") != null) {
+            for (final String location : getInstance().getConfig().getStringList("case-locations")) {
                 final String[] locat = location.split(";");
                 final Location loc = new Location(Bukkit.getWorld(locat[0]), Integer.parseInt(locat[1]), Integer.parseInt(locat[2]), Integer.parseInt(locat[3]));
                 final Hologram hd = HologramsAPI.createHologram(this, loc.clone().add(0.5, 2.0, 0.5));
-                for (final String line : getInstance().getConfig().getStringList("DEFAULT_HOLOGRAM")) {
+                for (final String line : getInstance().getConfig().getStringList("hologram")) {
                     hd.appendTextLine(StringUtil.colorize(line));
                 }
                 this.opened.put(loc, hd);

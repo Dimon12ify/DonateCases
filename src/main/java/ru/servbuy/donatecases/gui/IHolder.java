@@ -1,18 +1,26 @@
 package ru.servbuy.donatecases.gui;
 
-import org.bukkit.inventory.*;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.Setter;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.InventoryHolder;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class IHolder implements InventoryHolder
 {
+    @Setter(AccessLevel.PUBLIC)
     private Map<Integer, ClickHolder> clicks;
+    @Setter(AccessLevel.PUBLIC)
+    @Getter
     private Inventory inv;
     
     public IHolder() {
         this.clicks = new HashMap<>();
     }
-    
+
     public Inventory getInventory() {
         return this.inv;
     }
@@ -21,13 +29,5 @@ public class IHolder implements InventoryHolder
         if (this.clicks.containsKey(slot)) {
             this.clicks.get(slot).click();
         }
-    }
-    
-    public void setInv(final Inventory inv) {
-        this.inv = inv;
-    }
-    
-    public void setClicks(final HashMap<Integer, ClickHolder> clics) {
-        this.clicks = clics;
     }
 }

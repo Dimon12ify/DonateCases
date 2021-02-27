@@ -1,262 +1,26 @@
-DEFAULT_HOLOGRAM:
+hologram:
 - ''
-HISTORY:
-  FORMAT:
-    NAME: '&fНик: &b{player}'
-    LORE:
+history:
+  format:
+    name: '&fНик: &b{player}'
+    lore:
     - ''
     - ' &fДата открытия: &c{date}'
     - ' &fВремя открытия: &c{time}'
     - ' &fВыигрыш: {prize}'
     - ''
-  PRIZES:
+  prizes:
   - FlamesYT;§f§dСупер-Игрок§f;10.10.2020;06:06:11
-GUI:
-  ROWS: 6
-  TITLE: '&8Кейсы ► &4&lMineLegacy.ru'
-  FAKE_CHANCE:
-    ID: 175
-    NAME: '&6Получить +75% к шансу'
-    LORE:
-    - ''
-    - '&fКликнув сюда, вы получите &c+75% &fк шансу.'
-    - '&fПрирост шансов будет действовать &c3 часа&f.'
-    - ''
-    - '&b► &fНажмите, чтобы увеличить шансы выигрыша на &c75%'
-    - ''
-    UPDATE_TIME: 60
-    SLOT: 22
-  CASES_ITEMS:
-    donate:
-      ID: 397:3;MHF_Present1
-      SLOT: 31
-      NAME: '&b&lКейс с донатом'
-      LORE:
-      - '&a&l[!] &d&lБЫЛИ ПОВЫШЕНЫ ШАНСЫ! 100% ОКУП! &a&l[!]'
-      - ''
-      - '&a> &fКлючей от кейса&8: &c&l{keys}'
-      - '&a> &fМожет выпасть от &a&lСупер-Игрока &fдо &c&lВластелина'
-      - '&a> &f&lНажмите, чтобы открыть кейс'
-      - ''
-      - '&61 &fключ &7/ &e25 &fрублей'
-      - '&63 &fключа &7/ &e75 &fрублей'
-      - '&65 &fключей &7/ &e125 &fрублей'
-      - '&610 &fключей &7/ &e175 &fрублей'
-      - '&620 &fключей &7/ &e299 &fрублей'
-      - '&630 &fключей &7/ &e499 &fрублей'
-      - ''
-      - '&4&lВНИМАНИЕ!!! &bПри открытии кейса у Вас'
-      - '&bостается последняя выпавшая привилегия,'
-      - '&bдаже если вам не повезло, и она дешевле'
-      - ''
-      - '&c> &fКупить можно на сайте&8:'
-      - '&a&l&nMineLegacy.ru'
-  DEFAULT_ITEMS:
-    info:
-      SLOT: 4
-      ID: 340
-      NAME: '&6Информация'
-      LORE:
-      - ''
-      - Покупка всех кейсов только на сайте &c&lMineLegacy.ru
-      - Чтобы открыть кейс, нажмите по нему в этом меню
-      - ''
-      - '&fВнизу этого меню представлена &cистория выигрышей &f-'
-      - '&fпризы, которые &cвыбивают &fигроки.'
-      - ''
-      AMOUNT: 1
-    glass1:
-      SLOT: 0
-      ID: '160:14'
-      NAME: ''
-      LORE:
-      - ''
-      AMOUNT: 1
-    glass2:
-      SLOT: 1
-      ID: '160:14'
-      NAME: ''
-      LORE:
-      - ''
-      AMOUNT: 1
-    glass3:
-      SLOT: 2
-      ID: '160:14'
-      NAME: ''
-      LORE:
-      - ''
-      AMOUNT: 1
-    glass4:
-      SLOT: 3
-      ID: '160:14'
-      NAME: ''
-      LORE:
-      - ''
-      AMOUNT: 1
-    glass5:
-      SLOT: 5
-      ID: '160:14'
-      NAME: ''
-      LORE:
-      - ''
-      AMOUNT: 1
-    glass6:
-      SLOT: 6
-      ID: '160:14'
-      NAME: ''
-      LORE:
-      - ''
-      AMOUNT: 1
-    glass7:
-      SLOT: 7
-      ID: '160:14'
-      NAME: ''
-      LORE:
-      - ''
-      AMOUNT: 1
-    glass8:
-      SLOT: 8
-      ID: '160:14'
-      NAME: ''
-      LORE:
-      - ''
-      AMOUNT: 1
-    glass9:
-      SLOT: 9
-      ID: '160:14'
-      NAME: ''
-      LORE:
-      - ''
-      AMOUNT: 1
-    glass10:
-      SLOT: 12
-      ID: '160:14'
-      NAME: ''
-      LORE:
-      - ''
-      AMOUNT: 1
-    glass11:
-      SLOT: 13
-      ID: '160:14'
-      NAME: ''
-      LORE:
-      - ''
-      AMOUNT: 1
-    glass12:
-      SLOT: 14
-      ID: '160:14'
-      NAME: ''
-      LORE:
-      - ''
-      AMOUNT: 1
-    glass13:
-      SLOT: 17
-      ID: '160:14'
-      NAME: ''
-      LORE:
-      - ''
-      AMOUNT: 1
-    glass14:
-      SLOT: 18
-      ID: '160:14'
-      NAME: ''
-      LORE:
-      - ''
-      AMOUNT: 1
-    glass15:
-      SLOT: 26
-      ID: '160:14'
-      NAME: ''
-      LORE:
-      - ''
-      AMOUNT: 1
-    glass16:
-      SLOT: 27
-      ID: '160:14'
-      NAME: ''
-      LORE:
-      - ''
-      AMOUNT: 1
-    glass17:
-      SLOT: 35
-      ID: '160:14'
-      NAME: ''
-      LORE:
-      - ''
-      AMOUNT: 1
-    glass18:
-      SLOT: 36
-      ID: '160:14'
-      NAME: ''
-      LORE:
-      - ''
-      AMOUNT: 1
-    glass19:
-      SLOT: 44
-      ID: '160:14'
-      NAME: ''
-      LORE:
-      - ''
-      AMOUNT: 1
-MESSAGES:
-  NO_PERMISSIONS: '&f[&ci&f] У вас недостаточно прав!'
-  HELP:
-  - '&fКейсы.&f Помощь |'
-  - ''
-  - Выдать кейсы игроку - &a/cases give [ник] [название_кейса] [количество]
-  - Установить кейсы игроку - &a/cases set [ник] [название_кейса] [количество]
-  - Отнять кейсы у игрока - &a/cases delete [ник] [название_кейса] [количество]
-  - Установить кейс - &a/cases setcase [направление x или z]
-  - ''
-  NOT_NUMERIC: '&f[&ci&f] Вы неправильно ввели число'
-  COMMAND_GIVE_USE: '&f[&ci&f] Вы неправильно ввели команду, посмотрите ее использование
-    - &a&l/cases'
-  COMMAND_SET_USE: '&f[&ci&f] Вы неправильно ввели команду, посмотрите ее использование
-    - &a&l/cases'
-  COMMAND_DELETE_USE: '&f[&ci&f] Вы неправильно ввели команду, посмотрите ее использование
-    - &a&l/cases'
-  COMMAND_SETCASE_USE: '&f[&ci&f] Вы неправильно ввели команду, посмотрите ее использование
-    - &a&l/cases'
-  COMMAND_GIVE_SUCCESS: '&f[&ci&f] Вы выдали игроку &a&l{player}&f &c&l{amount} {case}&f
-    кейсов'
-  COMMAND_SET_SUCCESS: '&f[&ci&f] Вы установили игроку &a&l{player}&f &c&l{amount}
-    {case}&f кейсов'
-  COMMAND_DELETE_SUCCESS: '&f[&ci&f] Вы отняли у игрока &a&l{player}&f &c&l{amount}
-    {case}&f кейсов'
-  COMMAND_SETCASE_SUCCESS: '&f[&ci&f] Вы успешно установили кейс по направлению вращения
-    &c&l{direction}'
-  CASE_NOT_LOADED: '&f[&ci&f] Непредвиденная ошибка'
-  CASE_IN_OPEN: '&f[&ci&f] Кейс &aоткрывает &fдругой игрок. Пожалуйста, подождите.'
-  NO_CASES: '&f[&ci&f] У вас &cнет &fкейсов этого типа. Купите кейсы на сайте &a&lMineLegacy.ru'
-  COMMAND_SETCASE_SUCESS: '&f[&ci&f] Вы успешно установили кейс по направлению вращения
-    &c&l{direction}'
-  FAKE_IS_USED:
-  - ''
-  - '&f Шансы для вас уже &cувеличены &fи будут действовать &b3 часа&f.'
-  - '&f Успейте купить кейсы на сайте &b&lMineLegacy.ru&f, пока шансы увеличены.'
-  - ''
-  FAKE_USE:
-  - ''
-  - '&f Вы успешно включили &aувеличение шансов&f!'
-  - '&f Шансы &aувеличены &fна 75% и будут действовать &c3 часа.'
-  - '&f Успейте купить кейсы на сайте &b&lMineLegacy.ru&f, пока шансы увеличены.'
-  - ''
-  FAKE_BROADCAST:
-  - ''
-  - '&f Вам доступен шанс &c+ 75% &fво всех кейсах!'
-  - '&f Активируйте его на &b/warp case'
-  - ''
-  CASE_IS_OPEN: '&f[&ci&f] Кейс &cоткрывает &fигрок. Пожалуйста, ожидайте своей очереди...'
-CASES:
+cases:
   donate:
-    OPEN_MESSAGES:
+    open-message:
     - ''
     - '  &fИгрок &a{player} &fоткрывает &bДонат Кейс&f на &c/warp case'
     - '  &fИспытай удачу и ты, купив кейсы на сайте &aMineLegacy.ru'
     - ''
-    LEVEL_GROUPS:
-      ENABLE: true
-      LEVELS:
+    group-levels:
+      enable: true
+      levels:
         default: 0
         suser: 1
         creative: 2
@@ -268,136 +32,340 @@ CASES:
         glavar: 8
         sovlad: 9
         vlast: 10
-    ANIMATION_SETTINGS:
-      ROTATE_SOUND: UI_BUTTON_CLICK
-      END_SOUND: BLOCK_CHEST_CLOSE
-      RADIUS: 1.25
-      USE_FROSTLORD: true
-      ROTATE_TIME: 3
-      ITEMS_SPEED: 11.5
-      PARTICLES_SPEED: 8
-    ITEMS:
+    animation-settings:
+      rotate-sound: UI_BUTTON_CLICK
+      end-sound: BLOCK_CHEST_CLOSE
+      radius: 1.25
+      use-frostlord: true
+      rotate-time: 3
+      items-speed: 11.5
+      particles-speed: 8
+    items:
       suser:
-        TYPE: GROUP
-        ID: 397:3;eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGNlZTNhZWFkZDY4YjI0N2ZkZmUzZWE3YmMwMDhkMTJmZDk3YWMxNWVkMTViZjc0Njg1NDNhMDY2ODAifX19
-        GROUP: suser
-        GROUP_COMMAND: pex user {player} group set {group}
-        TITLE: '&8[&dСупер-игрок&8]'
-        COMMANDS:
+        type: GROUP
+        id: 397:3;eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGNlZTNhZWFkZDY4YjI0N2ZkZmUzZWE3YmMwMDhkMTJmZDk3YWMxNWVkMTViZjc0Njg1NDNhMDY2ODAifX19
+        group: suser
+        group-command: pex user {player} group set {group}
+        title: '&8[&dСупер-игрок&8]'
+        commands:
         - tm;&aПоздравляем!;&fВы выбили &8[&dСупер-игрок&8]
-        CHANCE: 30
+        chance: 30
       creative:
-        ID: 397:3;eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzMxYjE2MTc3MGYwMjAyMzdiNGFhMWU5MjhjNTQ4MGM4YjM2Y2JmZTNhNmFhYjllMjJlNTU3YzFkOTEwIn19fQ==
-        TYPE: GROUP
-        GROUP: creative
-        GROUP_COMMAND: pex user {player} group set {group}
-        TITLE: '&8[&aКреатив&8]'
-        COMMANDS:
+        id: 397:3;eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzMxYjE2MTc3MGYwMjAyMzdiNGFhMWU5MjhjNTQ4MGM4YjM2Y2JmZTNhNmFhYjllMjJlNTU3YzFkOTEwIn19fQ==
+        type: GROUP
+        group: creative
+        group-command: pex user {player} group set {group}
+        title: '&8[&aКреатив&8]'
+        commands:
         - tm;&aПоздравляем!;&fВы выбили &8[&aКреатив&8]
-        CHANCE: 25
+        chance: 25
       admin:
-        ID: 397:3;eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWIzMzQ4YTYxY2ZmYzc5ZWI0MmQ4NDlkMzc4MjI5NDMyYWE4MWQxOTg1NmIyNWZlYWFjNzUzODQ4NzEzN2E1In19fQ==
-        TYPE: GROUP
-        GROUP: admin
-        GROUP_COMMAND: pex user {player} group set {group}
-        TITLE: '&8[&cАдмин&8]'
-        COMMANDS:
+        id: 397:3;eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWIzMzQ4YTYxY2ZmYzc5ZWI0MmQ4NDlkMzc4MjI5NDMyYWE4MWQxOTg1NmIyNWZlYWFjNzUzODQ4NzEzN2E1In19fQ==
+        type: GROUP
+        group: admin
+        group-command: pex user {player} group set {group}
+        title: '&8[&cАдмин&8]'
+        commands:
         - bc;&r
         - bc;&f  Игрок &c{player} &fвыиграл &8[&cАдмин&8] &fв донат кейсе
         - bc;&f  Хочешь круче? &fТогда купи кейс на сайте » &cMineLegacy.ru
         - bc;&r
         - tm;&aПоздравляем!;&fВы выбили &8[&cАдмин&8]
-        CHANCE: 21
+        chance: 21
       lord:
-        ID: 397:3;eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjNkNWU0M2RlNWQ0MTc3YzRiYWYyZjQ0MTYxNTU0NDczYTNiMGJlNTQzMDk5OGI1ZmNkODI2YWY5NDNhZmUzIn19fQ==
-        TYPE: GROUP
-        GROUP: lord
-        GROUP_COMMAND: pex user {player} group set {group}
-        TITLE: '&8[&3Лорд&8]'
-        COMMANDS:
+        id: 397:3;eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjNkNWU0M2RlNWQ0MTc3YzRiYWYyZjQ0MTYxNTU0NDczYTNiMGJlNTQzMDk5OGI1ZmNkODI2YWY5NDNhZmUzIn19fQ==
+        type: GROUP
+        group: lord
+        group-command: pex user {player} group set {group}
+        title: '&8[&3Лорд&8]'
+        commands:
         - bc;&r
         - bc;&f  Игрок &c{player} &fвыиграл &8[&3Лорд&8] &fв донат кейсе
         - bc;&f  Хочешь круче? &fТогда купи кейс на сайте » &cMineLegacy.ru
         - bc;&r
         - tm;&aПоздравляем!;&fВы выбили &8[&3Лорд&8]
-        CHANCE: 18
+        chance: 18
       gladmin:
-        ID: 397:3;eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWRhZjY1NzcxZWZkNWQzMDQ3ZDRlZTQ2MDU0YzRlN2MzNzhkYzk2MWQ4ZjJiZTkzZDEzYTlkZDk1NjhlIn19fQ==
-        TYPE: GROUP
-        GROUP: gladmin
-        GROUP_COMMAND: pex user {player} group set {group}
-        TITLE: '&8[&9Гл.Админ&8]'
-        COMMANDS:
+        id: 397:3;eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWRhZjY1NzcxZWZkNWQzMDQ3ZDRlZTQ2MDU0YzRlN2MzNzhkYzk2MWQ4ZjJiZTkzZDEzYTlkZDk1NjhlIn19fQ==
+        type: GROUP
+        group: gladmin
+        group-command: pex user {player} group set {group}
+        title: '&8[&9Гл.Админ&8]'
+        commands:
         - bc;&r
         - bc;&f  Игрок &c{player} &fвыиграл &8[&9Гл.Админ&8] &fв донат кейсе
         - bc;&f  Хочешь круче? &fТогда купи кейс на сайте » &cMineLegacy.ru
         - bc;&r
         - tm;&aПоздравляем!;&fВы выбили &8[&9Гл.Админ&8]
-        CHANCE: 10
+        chance: 10
       sozd:
-        ID: 397:3;eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmJhOGQ0YzM0MDgzNDY4MjYxMjY5MmMwNGJkYzUzMjk1MDI0YzQ4ZjM0MjI2ZTcyMTgyY2NkOWRlYzI1OTIifX19
-        TYPE: GROUP
-        GROUP: sozd
-        GROUP_COMMAND: pex user {player} group set {group}
-        TITLE: '&8[&eСоздатель&8]'
-        COMMANDS:
+        id: 397:3;eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmJhOGQ0YzM0MDgzNDY4MjYxMjY5MmMwNGJkYzUzMjk1MDI0YzQ4ZjM0MjI2ZTcyMTgyY2NkOWRlYzI1OTIifX19
+        type: GROUP
+        group: sozd
+        group-command: pex user {player} group set {group}
+        title: '&8[&eСоздатель&8]'
+        commands:
         - bc;&r
         - bc;&f  Игрок &c{player} &fвыиграл &8[&eСоздатель&8] &fв донат кейсе
         - bc;&f  Хочешь круче? &fТогда купи кейс на сайте » &cMineLegacy.ru
         - bc;&r
         - tm;&aПоздравляем!;&fВы выбили &8[&eСоздатель&8]
-        CHANCE: 7
+        chance: 7
       osnov:
-        ID: 397:3;eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWE3MzZlYjFhN2NlNWE1ZjVkNWIxNjg5MzFmYTMxMzk2Mzg2YzE2MDU2OGI0MTk2NGJhODZjZGI5ZWQ2YmUifX19
-        TYPE: GROUP
-        GROUP: osnov
-        GROUP_COMMAND: pex user {player} group set {group}
-        TITLE: '&8[&bОснователь&8]'
-        COMMANDS:
+        id: 397:3;eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWE3MzZlYjFhN2NlNWE1ZjVkNWIxNjg5MzFmYTMxMzk2Mzg2YzE2MDU2OGI0MTk2NGJhODZjZGI5ZWQ2YmUifX19
+        type: GROUP
+        group: osnov
+        group-command: pex user {player} group set {group}
+        title: '&8[&bОснователь&8]'
+        commands:
         - bc;&r
         - bc;&f  Игрок &c{player} &fвыиграл &8[&bОснователь&8] &fв донат кейсе
         - bc;&f  Хочешь круче? &fТогда купи кейс на сайте » &cMineLegacy.ru
         - bc;&r
         - tm;&aПоздравляем!;&fВы выбили &8[&bОснователь&8]
-        CHANCE: 5
+        chance: 5
       glavar:
-        ID: 397:3;eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjU4MDdjYzRjM2I2OTU4YWVhNjE1NmU4NDUxOGQ5MWE0OWM1ZjMyOTcxZTZlYjI2OWEyM2EyNWEyNzE0NSJ9fX0=
-        TYPE: GROUP
-        GROUP: glavar
-        GROUP_COMMAND: pex user {player} group set {group}
-        TITLE: '&8[&5Главарь&8]'
-        COMMANDS:
+        id: 397:3;eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjU4MDdjYzRjM2I2OTU4YWVhNjE1NmU4NDUxOGQ5MWE0OWM1ZjMyOTcxZTZlYjI2OWEyM2EyNWEyNzE0NSJ9fX0=
+        type: GROUP
+        group: glavar
+        group-command: pex user {player} group set {group}
+        title: '&8[&5Главарь&8]'
+        commands:
         - bc;&r
         - bc;&f  Игрок &c{player} &fвыиграл &8[&5Главарь&8] &fв донат кейсе
         - bc;&f  Хочешь круче? &fТогда купи кейс на сайте » &cMineLegacy.ru
         - bc;&r
         - tm;&aПоздравляем!;&fВы выбили &8[&5Главарь&8]
-        CHANCE: 3
+        chance: 3
       sovlad:
-        ID: 397:3;eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjU4MDdjYzRjM2I2OTU4YWVhNjE1NmU4NDUxOGQ5MWE0OWM1ZjMyOTcxZTZlYjI2OWEyM2EyNWEyNzE0NSJ9fX0=
-        TYPE: GROUP
-        GROUP: sovlad
-        GROUP_COMMAND: pex user {player} group set {group}
-        TITLE: '&8[&6Совладелец&8]'
-        COMMANDS:
+        id: 397:3;eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjU4MDdjYzRjM2I2OTU4YWVhNjE1NmU4NDUxOGQ5MWE0OWM1ZjMyOTcxZTZlYjI2OWEyM2EyNWEyNzE0NSJ9fX0=
+        type: GROUP
+        group: sovlad
+        group-command: pex user {player} group set {group}
+        title: '&8[&6Совладелец&8]'
+        commands:
         - bc;&r
         - bc;&f  Игрок &c{player} &fвыиграл &8[&6Совладелец&8] &fв донат кейсе
         - bc;&f  Хочешь круче? &fТогда купи кейс на сайте » &cMineLegacy.ru
         - bc;&r
         - tm;&aПоздравляем!;&fВы выбили &8[&6Совладелец&8]
-        CHANCE: 2
+        chance: 2
       vlast:
-        ID: 397:3;eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjU4MDdjYzRjM2I2OTU4YWVhNjE1NmU4NDUxOGQ5MWE0OWM1ZjMyOTcxZTZlYjI2OWEyM2EyNWEyNzE0NSJ9fX0=
-        TYPE: GROUP
-        GROUP: vlast
-        GROUP_COMMAND: pex user {player} group set {group}
-        TITLE: '&c[&4Властелин&c]'
-        COMMANDS:
+        id: 397:3;eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjU4MDdjYzRjM2I2OTU4YWVhNjE1NmU4NDUxOGQ5MWE0OWM1ZjMyOTcxZTZlYjI2OWEyM2EyNWEyNzE0NSJ9fX0=
+        type: GROUP
+        group: vlast
+        group-command: pex user {player} group set {group}
+        title: '&c[&4Властелин&c]'
+        commands:
         - bc;&r
         - bc;&f  Игрок &c{player} &fвыиграл &c[&4Властелин&c] &fв донат кейсе
         - bc;&f  Покупка кейса производится на сайте » &cMineLegacy.ru
         - bc;&r
         - tm;&aПоздравляем!;&fВы выбили &c[&4Властелин&c]
-        CHANCE: 1
-CASES_LOCATIONS:
+        chance: 1
+gui:
+  rows: 6
+  title: '&8Кейсы ► &4&lMineLegacy.ru'
+  case-items:
+    donate:
+      id: 397:3;MHF_Present1
+      slot: 31
+      name: '&b&lКейс с донатом'
+      lore:
+        - '&a&l[!] &d&lБЫЛИ ПОВЫШЕНЫ ШАНСЫ! 100% ОКУП! &a&l[!]'
+        - ''
+        - '&a> &fКлючей от кейса&8: &c&l{keys}'
+        - '&a> &fМожет выпасть от &a&lСупер-Игрока &fдо &c&lВластелина'
+        - '&a> &f&lНажмите, чтобы открыть кейс'
+        - ''
+        - '&61 &fключ &7/ &e25 &fрублей'
+        - '&63 &fключа &7/ &e75 &fрублей'
+        - '&65 &fключей &7/ &e125 &fрублей'
+        - '&610 &fключей &7/ &e175 &fрублей'
+        - '&620 &fключей &7/ &e299 &fрублей'
+        - '&630 &fключей &7/ &e499 &fрублей'
+        - ''
+        - '&4&lВНИМАНИЕ!!! &bПри открытии кейса у Вас'
+        - '&bостается последняя выпавшая привилегия,'
+        - '&bдаже если вам не повезло, и она дешевле'
+        - ''
+        - '&c> &fКупить можно на сайте&8:'
+        - '&a&l&nMineLegacy.ru'
+  default-items:
+    info:
+      slot: 4
+      id: 340
+      name: '&6Информация'
+      lore:
+        - ''
+        - Покупка всех кейсов только на сайте &c&lMineLegacy.ru
+        - Чтобы открыть кейс, нажмите по нему в этом меню
+        - ''
+        - '&fВнизу этого меню представлена &cистория выигрышей &f-'
+        - '&fпризы, которые &cвыбивают &fигроки.'
+        - ''
+      amount: 1
+    glass1:
+      slot: 0
+      id: '160:14'
+      name: ''
+      lore:
+        - ''
+      amount: 1
+    glass2:
+      slot: 1
+      id: '160:14'
+      name: ''
+      lore:
+        - ''
+      amount: 1
+    glass3:
+      slot: 2
+      id: '160:14'
+      name: ''
+      lore:
+        - ''
+      amount: 1
+    glass4:
+      slot: 3
+      id: '160:14'
+      name: ''
+      lore:
+        - ''
+      amount: 1
+    glass5:
+      slot: 5
+      id: '160:14'
+      name: ''
+      lore:
+        - ''
+      amount: 1
+    glass6:
+      slot: 6
+      id: '160:14'
+      name: ''
+      lore:
+        - ''
+      amount: 1
+    glass7:
+      slot: 7
+      id: '160:14'
+      name: ''
+      lore:
+        - ''
+      amount: 1
+    glass8:
+      slot: 8
+      id: '160:14'
+      name: ''
+      lore:
+        - ''
+      amount: 1
+    glass9:
+      slot: 9
+      id: '160:14'
+      name: ''
+      lore:
+        - ''
+      amount: 1
+    glass10:
+      slot: 12
+      id: '160:14'
+      name: ''
+      lore:
+        - ''
+      amount: 1
+    glass11:
+      slot: 13
+      id: '160:14'
+      name: ''
+      lore:
+        - ''
+      amount: 1
+    glass12:
+      slot: 14
+      id: '160:14'
+      name: ''
+      lore:
+        - ''
+      amount: 1
+    glass13:
+      slot: 17
+      id: '160:14'
+      name: ''
+      lore:
+        - ''
+      amount: 1
+    glass14:
+      slot: 18
+      id: '160:14'
+      name: ''
+      lore:
+        - ''
+      amount: 1
+    glass15:
+      slot: 26
+      id: '160:14'
+      name: ''
+      lore:
+        - ''
+      amount: 1
+    glass16:
+      slot: 27
+      id: '160:14'
+      name: ''
+      lore:
+        - ''
+      amount: 1
+    glass17:
+      slot: 35
+      id: '160:14'
+      name: ''
+      lore:
+        - ''
+      amount: 1
+    glass18:
+      slot: 36
+      id: '160:14'
+      name: ''
+      lore:
+        - ''
+      amount: 1
+    glass19:
+      slot: 44
+      id: '160:14'
+      name: ''
+      lore:
+        - ''
+      amount: 1
+case-locations:
 - world;263;80;197;x
+MESSAGES:
+  NO_PERMISSIONS: '&f[&ci&f] У вас недостаточно прав!'
+  HELP:
+    - '&fКейсы.&f Помощь |'
+    - ''
+    - Выдать кейсы игроку - &a/dc givekey [ник] [название_кейса] [количество]
+    - Установить кейсы игроку - &a/dc set [ник] [название_кейса] [количество]
+    - Отнять кейсы у игрока - &a/dc delete [ник] [название_кейса] [количество]
+    - Установить кейс - &a/dc setcase [направление x или z]
+    - Обновить конфиг - &a/dc reload
+    - ''
+  NOT_NUMERIC: '&f[&ci&f] Вы неправильно ввели число'
+  COMMAND_GIVE_USE: '&f[&ci&f] Вы неправильно ввели команду, выдать кейсы игроку - &a&l/dc givekey [ник] [название_кейса] [количество]'
+  COMMAND_SET_USE: '&f[&ci&f] Вы неправильно ввели команду, установить кейсы игроку - &a&l/dc set [ник] [название_кейса] [количество]'
+  COMMAND_DELETE_USE: '&f[&ci&f] Вы неправильно ввели команду, отнять кейсы у игрока - &a&l/dc delete [ник] [название_кейса] [количество]'
+  COMMAND_SETCASE_USE: '&f[&ci&f] Вы неправильно ввели команду, установить кейс - &a&l/dc setcase [направление x или z]'
+  COMMAND_GIVE_SUCCESS: '&f[&ci&f] Вы выдали игроку &a&l{player}&f &c&l{amount} {case}&f
+    кейсов'
+  COMMAND_SET_SUCCESS: '&f[&ci&f] Вы установили игроку &a&l{player}&f &c&l{amount}
+    {case}&f кейсов'
+  COMMAND_DELETE_SUCCESS: '&f[&ci&f] Вы отняли у игрока &a&l{player}&f &c&l{amount}
+    {case}&f кейсов'
+  COMMAND_SETCASE_SUCCESS: '&f[&ci&f] Вы успешно установили кейс по направлению вращения
+    &c&l{direction}'
+  CASE_NOT_LOADED: '&f[&ci&f] Непредвиденная ошибка'
+  CASE_IS_OPEN: '&f[&ci&f] Кейс &aоткрывает &fдругой игрок. Пожалуйста, подождите.'
+  NO_CASES: '&f[&ci&f] У вас &cнет &fкейсов этого типа. Купите кейсы на сайте &a&lMineLegacy.ru'
+  COMMAND_SETCASE_SUCESS: '&f[&ci&f] Вы успешно установили кейс по направлению вращения
+    &c&l{direction}'

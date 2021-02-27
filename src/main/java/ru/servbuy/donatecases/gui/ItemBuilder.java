@@ -34,7 +34,7 @@ public class ItemBuilder
         if (id.contains(":")) {
             if (id.split(":")[0].equalsIgnoreCase("373")) {
                 stack = new ItemStack(Material.POTION);
-                final Potion potion = new Potion(PotionType.getByEffect(PotionEffectType.getById(Integer.valueOf(id.split(":")[1]))));
+                final Potion potion = new Potion(PotionType.getByEffect(PotionEffectType.getById(Integer.parseInt(id.split(":")[1]))));
                 potion.setSplash(true);
                 potion.apply(stack);
             }
